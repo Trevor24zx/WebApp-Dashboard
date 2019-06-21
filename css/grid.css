@@ -1,0 +1,63 @@
+/* Full Page Grid */
+
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "navigation"
+        "main";
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 60px 1fr;
+        grid-template-areas:
+        "header header"
+        "navigation main"
+        "navigation main";
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 50%;
+    }
+
+    .navigation {
+        grid-row: 2 / span 2;
+    }
+
+    .dashboard {
+        grid-column: 1 / span 2;
+    }
+
+    .main-header,
+	.alert,
+	.traffic,
+	.social-stats {
+		grid-column: 1 / span 2;
+    }
+    
+    .dailyTraffic-container,
+	.members,
+	.message {
+		grid-column: 2 / span 2;
+    }
+    
+    .mobile-container,
+	.recent-activity,
+	.settings {
+		grid-column: 2 / span 1;
+    }
+    
+    .grid-structure {
+		width: 40vw;
+    }
+    
+    .grid-structure2 {
+		width: 88vw;
+	}
+}
