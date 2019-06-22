@@ -1,4 +1,15 @@
 
+// Alert Box
+
+const alert = document.querySelector('.alert');
+const btn = document.querySelector('.close-btn');
+const badge = document.querySelector('.badge');
+
+btn.addEventListener('click', () => {
+	alert.style.display = 'none';
+	badge.style.display = 'none';
+});
+
 // Traffic Line Chart
 const trafficChart = document.getElementById('traffic-chart');
 let trafficData = new Chart(trafficChart, {

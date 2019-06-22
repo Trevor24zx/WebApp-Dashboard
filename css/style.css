@@ -157,7 +157,10 @@ textarea {
 .close-btn {
     float: right;
     color: white;
-    margin-left: 15px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
 }
 
 /* Charts */
